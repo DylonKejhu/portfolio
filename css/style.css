@@ -3,29 +3,27 @@
     margin: 0;
     padding: 0;
 }
-
 body {
     font-family: "nunito", sans-serif;
     color: white;
     background-color: #0C0C0C;
     overflow-x: hidden;
 }
-
 /* Hide scrollbar */
 ::-webkit-scrollbar {
     display: none;
 }
-
 .mainpage {
     margin: 0;
     padding: 0;
 }
 /* Landing Page Styling */
 .home {
-    background-image: linear-gradient(to bottom, transparent 90%, rgba(0, 0, 0, 1) 100%), url('../assets/images/home.jpeg');
+    background-image: linear-gradient(to bottom, transparent 90%, rgba(0, 0, 0, 1) 100%), url('../assets/images/home.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    min-height: 100vh;
     width: 100vw;
     padding-top: 20px;
     display: flex;
@@ -47,21 +45,27 @@ body {
     font-weight: 400;
     margin: 0 40px 0 40px;
     white-space: nowrap;
+    font-size: 6vh;
 }
 .headerlist {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     list-style: none;
-    margin-right: 100px;
     height: 100%;
     align-items: center;
-    gap: 15px;
+    gap: 1.4vw;
+    margin-right: 50%;
+    width: 10vw;
 }
 .headerlistchild {
     display: flex;
     height: 100%;
+    width: 8vw;
+    font-size: 3vh;
 }
 .headerlistchild a {
-    padding: 0 30px;
+    padding: 0 2vw;
     color: white;
     text-decoration: none;
     display: flex;
@@ -69,16 +73,9 @@ body {
     transition: all 0.3s;
     border-radius: 90px;
 }
-.headerlistchild a:hover {
-    background-color: #481E14;
-    color: rgb(255, 87, 51);
-    border-radius: 90px;
-    outline: 1px solid rgba(234, 239, 0, 1);
-    opacity: 0.6;
-}
 #headerfoto {
-    height: 50vh;
-    margin: 0 0 7vh 5vw;
+    height: 60vh;
+    margin: 7vh auto 7vh 5vw;
     padding: 10px;
     background-color: rgba(43, 43, 43, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -86,7 +83,8 @@ body {
 }
 #headerintro {
     width: 50vw;
-    margin: 10vh 0 0 17vw;
+    padding-top: 10vh;
+    margin: auto;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
 }
 #jabatanintro {
@@ -104,7 +102,7 @@ body {
     border-left: 2px solid rgba(255, 255, 255, 0.315);
 }
 /* About Page Styling */
-.about {
+#about {
     display: flex;
     flex-wrap: wrap;
     padding: 5vh 5vw;
@@ -115,7 +113,7 @@ body {
 #aboutme {
     font: 10vh "Oregano", cursive;
     padding-right: 2.5vw;
-    margin-right: 2.5vw;
+    margin-right: auto;
     border-right: 2px solid rgba(255, 255, 255, 0.315);
     max-width: 30%;
 }
@@ -128,7 +126,7 @@ body {
     margin-left: auto;
 }
 /* Skill Page Styling */
-.skill {
+.skilldiv {
     display: flex;
     flex-wrap: wrap;
     padding: 5vh 5vw;
@@ -137,7 +135,7 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     justify-content: center;
 }
-#skillme {
+#skillsec {
     font: 10vh "Oregano", cursive;
     margin: 0 auto;
     width: 100vw;
@@ -152,10 +150,14 @@ body {
 }
 .skills {
     height: 20vh;
+    width: 20vh;
     padding: 3vh;
 }
+.bingkaiskills img {
+    object-fit: cover;
+}
 /* Project Page Styling */
-.skill {
+.project {
     display: flex;
     flex-wrap: wrap;
     padding: 5vh 5vw;
@@ -167,15 +169,23 @@ body {
 #projectme {
     font: 10vh "Oregano", cursive;
     margin: 0 auto;
+    padding-bottom: 3vh;
     width: 100vw;
     text-align: center;
 }
+.video {
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 5px 5px;
+}
 /* Comission Page Styling */
 .comission {
-    background-image: linear-gradient(to top, transparent 70%, rgba(0, 0, 0, 1) 100%), linear-gradient(to bottom, transparent 70%, rgba(0, 0, 0, 1) 100%), url('../assets/images/comission.jpg');
+    background-image: linear-gradient(to top, transparent 70%, rgba(0, 0, 0, 1) 100%), linear-gradient(to bottom, transparent 70%, rgba(0, 0, 0, 1) 100%), url('../assets/images/comission.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    min-height: 100vh;
     width: 100vw;
     padding-top: 20px;
     display: flex;
@@ -191,13 +201,13 @@ body {
     text-align: center;
 }
 .komisi {
-    width: 250px;
+    width: 25vw;
     margin: 1vw;
 }
 .atas {
     background-color: rgba(43, 43, 43, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    
+    padding: 2% 2% 0;
 }
 .atas img {
     width: 100%;
@@ -250,33 +260,30 @@ body {
 .footerlistchild {
     border: none;
 }
-#footerdescription {
-    color: rgb(87, 87, 87);
-    width: 50vw;
-    padding-right: 19.9vw;
-    align-self: center;
-}
 /* Social Media Icons */
 .socialmedia {
     display: flex;
-    padding-top: 20vh;
+    padding: 30vh 2vw 0 0;
+    justify-content: right;
 }
 .socialicon img {
-    margin: 5vh 0 0 2vw;
+    margin: 0 0 0 2vw;
     width: 35px;
     transition: opacity 0.3s;
 }
-.socialicon:hover img {
-    opacity: 0.7;
-}
 .socialmedia2 {
     display: flex;
-    justify-content: space-between;
+    border-top: 2px solid rgba(255, 255, 255, 0.315);
+    width: 100vw;
 }
 #socialmedia3 {
     display: flex;
-    padding-left: 33vw;
-
+    margin-left: auto;
+}
+#footerdescription {
+    color: rgb(87, 87, 87);
+    align-self: center;
+    margin-right: auto;
 }
 .socialicon2 img {
     margin: 5px;
@@ -284,6 +291,13 @@ body {
     width: 40px;
     transition: opacity 0.3s;
 }
-.socialicon2:hover img {
+.socialicon:hover, .socialicon2:hover img {
     opacity: 0.7;
+}
+.headerlistchild a:hover {
+    background-color: #481E14;
+    color: rgb(255, 87, 51);
+    border-radius: 90px;
+    outline: 1px solid rgba(234, 239, 0, 1);
+    opacity: 0.6;
 }
