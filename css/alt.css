@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "nunito", sans-serif;
+    color: white;
+    background-color: #0C0C0C;
+    overflow-x: hidden;
+    animation: fadeIn 2s ease-in;
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+.mainpage {
+    margin: 0;
+    padding: 0;
+}
+
+/* Landing Page Styling */
+.home {
+    background-image: linear-gradient(to bottom, transparent 90%, rgba(0, 0, 0, 1) 100%), url('../assets/images/home.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    animation: slideIn 1.5s ease-in-out;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(43, 43, 43, 0.5);
+    height: 8vh;
+    width: 90vw;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 90px;
+    margin: 0 auto;
+    animation: slideDown 1.2s ease-in;
+}
+.headerlogo {
+    font-family: "Oregano", cursive;
+    font-weight: 400;
+    margin: 0 40px 0 40px;
+    white-space: nowrap;
+    transition: transform 0.3s;
+}
+.headerlogo:hover {
+    transform: scale(1.1);
+}
+.headerlist {
+    display: flex;
+    list-style: none;
+    margin-right: 100px;
+    height: 100%;
+    align-items: center;
+    gap: 15px;
+}
+.headerlistchild a {
+    padding: 0 30px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s, transform 0.3s;
+    border-radius: 90px;
+}
+.headerlistchild a:hover {
+    background-color: #481E14;
+    color: rgb(255, 87, 51);
+    border-radius: 90px;
+    outline: 1px solid rgba(234, 239, 0, 1);
+    opacity: 0.6;
+    transform: translateY(-5px);
+}
+#headerfoto {
+    height: 50vh;
+    margin: 0 0 7vh 5vw;
+    padding: 10px;
+    background-color: rgba(43, 43, 43, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px 90px 30px 90px;
+    animation: fadeIn 2s ease-in;
+}
+#headerintro {
+    width: 50vw;
+    margin: 10vh 0 0 17vw;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+    animation: fadeInUp 1.5s ease-out;
+}
+#deskripsiintro {
+    font: lighter 3vh 'Lora', serif;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    width: 40%;
+    margin: 2vh 0 0 2vw;
+    padding-left: 1vw;
+    border-left: 1px solid white;
+    animation: slideIn 1.2s ease-out;
+}
+
+/* About Page Styling */
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5vh 5vw;
+    background-color: #000000;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    animation: fadeInUp 2s ease-out;
+}
+#aboutme {
+    font: 10vh "Oregano", cursive;
+    padding-right: 2.5vw;
+    margin-right: 2.5vw;
+    border-right: 2px solid rgba(255, 255, 255, 0.315);
+    max-width: 30%;
+    transition: transform 0.3s;
+}
+#aboutme:hover {
+    transform: scale(1.05);
+}
+#aboutmeproject {
+    margin-left: auto;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Skill Page Styling */
+.skill {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5vh 5vw;
+    background-color: #000000;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    justify-content: center;
+    animation: slideUp 2s ease-out;
+}
+.skills {
+    height: 25vh;
+    object-fit: contain;
+    padding: 1vh;
+    animation: fadeInScale 2s ease-in-out;
+}
+
+/* Project Page Styling */
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5vh 5vw;
+    background-color: #000000;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    animation: slideIn 1.8s ease-in-out;
+}
+#projectme {
+    font: 10vh "Oregano", cursive;
+    margin: 0 auto;
+    animation: fadeIn 1.5s ease-in;
+}
+
+/* Footer Section Styling */
+.footer {
+    background-color: rgba(43, 43, 43, 0.5);
+    padding: 50px 20px 20px 20px;
+    color: white;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.socialicon img {
+    margin-top: 4wh;
+    gap: 5vw;
+    width: 30px;
+    transition: opacity 0.3s, transform 0.3s;
+}
+.socialicon:hover img {
+    opacity: 0.7;
+    transform: scale(1.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50%); }
+    to { transform: translateY(0); }
+}
